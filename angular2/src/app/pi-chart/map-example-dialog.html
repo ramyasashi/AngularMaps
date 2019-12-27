@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>MAP</h1>
+<div mat-dialog-content>
+    <!-- <app-map [data]="location"></app-map> -->
+    <div *ngIf = "data">
+      {{data.location.latitude}}, {{data.location.longitude}}
+      <agm-map style = "width:800px; height: 500px;" [latitude]='data.location.latitude' [longitude]='data.location.location'> 
+        <agm-marker [latitude]='data.location.latitude' [longitude]='data.location.longitude'>
+         </agm-marker> 
+      </agm-map>
+      <!-- <agm-map style = "width:800px; height: 500px;" [latitude]='12.959777' [longitude]='77.602484 '> 
+        <agm-marker [latitude]='12.959777' [longitude]='77.602484 '>
+         </agm-marker> 
+      </agm-map> -->
+    </div>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoThanksClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>

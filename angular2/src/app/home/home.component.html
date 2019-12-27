@@ -1,0 +1,34 @@
+<div class="homePage">
+    <section class="signin-form">
+        <form fxLayout="column" [formGroup]="signinForm" fxLayoutAlign="center center" fxLayoutGap="10px" (ngSubmit)="onSubmit(signinForm)">
+          <mat-form-field hintLabel="example@example.com">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+          </mat-form-field>
+          <mat-error [hidden]="signinForm.get('email').valid && signinForm.get('email').untouched">
+              <span *ngIf="!signinForm.get('email').valid && signinForm.get('email').touched">
+                <span *ngIf=" !!signinForm.get('email').errors.required">Email is required !!!</span>
+                <span *ngIf="!!signinForm.get('email').errors.pattern">It should match the email pattern !!</span>
+            </span>
+          </mat-error>
+          <mat-form-field hintLabel="Should be atleast 6 characters long.">
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" [type]="hide ? 'password':'text'"/>
+            <mat-icon matSuffix (click)="hide = !hide">
+              {{hide ? 'visibility_off':'visibility'}}
+            </mat-icon>
+          </mat-form-field>
+          <mat-error [hidden]="signinForm.get('password').valid && signinForm.get('password').untouched">
+              <span *ngIf="!signinForm.get('password').valid && signinForm.get('password').touched">
+                <span *ngIf="!!signinForm.get('password').errors.required">Password is required !!!</span>
+                <span *ngIf="!!signinForm.get('password').errors.pattern">Minimum eight characters, at least one letter and one number !!</span>
+            </span>
+          </mat-error>
+      
+          <button type="submit" mat-raised-button color="primary" [disabled] = "!signinForm.valid">Submit</button>
+          <!-- <button type="submit" mat-raised-button color="primary" [mat-dialog-close]="true">Submit</button> -->
+      
+        </form>
+      </section>
+  <!-- <button (click)="functionCall()">Click</button> -->
+</div>

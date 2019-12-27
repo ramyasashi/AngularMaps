@@ -1,0 +1,40 @@
+.container{
+    display: flex;
+    width: 1000px;
+    height: 700px;
+}
+.container1{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 650px;
+    border: 1px solid blue;
+}
+.piChart{
+    width:600px;
+    height:auto;
+    border: 1px solid red;
+}
+.tableData{
+    width:600px;
+    height:auto;
+    border: 1px solid green;
+}
+.tableSize{
+    width:100%;
+    height:auto;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+.alertData{
+    width: 400px;
+    height: 650px;
+    border: 1px solid aqua;
+}
+agm-map {
+    width: 500px;
+    height : 600px;
+}

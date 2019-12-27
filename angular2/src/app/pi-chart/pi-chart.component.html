@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="container1">
+    <div style="display: block;" class="piChart">
+      <canvas baseChart 
+        [data]="pieChartData" 
+        [labels]="pieChartLabels" 
+        [chartType]="pieChartType"
+        [options]="pieChartOptions"
+        [plugins]="pieChartPlugins"
+        [legend]="pieChartLegend">
+      </canvas>
+    </div>
+    <div class="tableData">
+      <table class="tableSize">
+        <tr>
+          <th>Name</th>
+          <th>State</th>
+          <th>Time</th>
+          <th>Map Location</th>
+        </tr>
+        <tr *ngFor = "let user of users">
+          <td>{{user.name}}</td>
+          <td>{{user.state}}</td>
+          <td>{{user.time}}</td>
+          <td id="buttonClass"><button (click)="openDailog2(user)">ClickForLocation</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="alertData">
+    <h1>Alert Messages</h1>
+    <p *ngFor = "let user of users"(click)="openDailog(user)"style="cursor: pointer">{{user.alertMessage}}</p>
+  </div>
+</div>

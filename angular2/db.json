@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "name": "Auto100",
+      "state": "idle",
+      "time": "1:00",
+      "location": {
+        "latitude":"12.959777",
+        "longitude":"77.602484"
+      },
+      "alertMessage":"Ride is in Idle"
+    },
+    {
+      "name": "Auto101",
+      "state": "moving",
+      "time": "1:00",
+      "location": {
+        "latitude":"12.960498",
+        "longitude": "77.601121"
+      },
+      "alertMessage":"Ride is started"
+    },
+    {
+      "name": "Auto102",
+      "state": "stopped",
+      "time": "1:00",
+      "location": {
+        "latitude": "12.961423",
+        "longitude": "77.599378"
+      },
+      "alertMessage":"Ride is Completed"
+    },
+    {
+      "name": "Auto103",
+      "state": "over speed",
+      "time": "1:00",
+      "location": {
+        "latitude": "12.961423",
+        "longitude": "77.599378"
+      },
+      "alertMessage":"Ride is moving with Over Speed"
+    }
+  ]
+}

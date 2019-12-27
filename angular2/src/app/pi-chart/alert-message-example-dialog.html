@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Passanger</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput placeholder="Name" [(ngModel)]="data.name">
+  </mat-form-field><br>
+ <mat-form-field>
+        <input matInput  placeholder="State" [(ngModel)]="data.state">
+ </mat-form-field>
+ <mat-form-field>
+    <input matInput  placeholder="Time" [(ngModel)]="data.time">
+</mat-form-field>
+ <!-- <mat-form-field>
+        <input matInput placeholder="Location" [(ngModel)]="data.address">
+ </mat-form-field> -->
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoThanksClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>
